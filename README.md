@@ -19,6 +19,8 @@ For the Object/Semantic Segmentation tasks I used the highly popular Pytorch Det
   - This file includes the images I used as inputs for the panoptic segmentation. The main image I used for the panoptic segmentation was an image of the Antigua island. The panoptic segmentation classified the Sky, Sea, Mountain, and Grass regions. The reason I used an image of the Antigua island is because the synthetic parachute video feeds will include grass, sky, and sea regions. I also tried finding the boundary lines in an image to guide the parachute where to land.
   - The image below shows the result of the panoptic segmentation
   ![image](https://user-images.githubusercontent.com/77814810/204119374-bc452c58-cb86-47ae-bfda-d53b47163e09.png)
+  - With this image we can access a Pixel matrix. For example the top of the image is the Sky, so the top rows of the matrix will have values that represent the sky class. The bottom rows of the matrix will have values that represent the sea.
+    - So this matrix will be used to train another neural network to track the location of the parachute
 
   
 - OpenCVProcessing.ipynb
